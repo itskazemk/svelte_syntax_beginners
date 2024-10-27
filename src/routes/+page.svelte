@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Header from './Header.svelte';
+	import { globalState } from './values.svelte';
 
 	let formState = $state({
 		answers: { name: '', birthday: '' },
@@ -30,9 +31,9 @@
 	}
 </script>
 
+<div style="background-color: blue;">page ... {globalState.jwt}</div>
 <Header name={formState.answers.name} />
 <main>
-    
 	<p>step: {formState.step + 1}</p>
 
 	{#each QUESTIONS as question, index (question.id)}
