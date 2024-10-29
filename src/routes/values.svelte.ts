@@ -1,5 +1,14 @@
-export const globalState = $state({ jwt: 'jwt_token' });
+const init = {
+	user: 'kazem',
+	jwt: 'xxxxx'
+};
 
-export function chnage_state() {
+export const globalState = $state(init);
+
+export function change_state() {
 	globalState.jwt = 'BIG CHNAGE';
+}
+
+export function updateUser({ user }) {
+	globalState.user = user;
 }

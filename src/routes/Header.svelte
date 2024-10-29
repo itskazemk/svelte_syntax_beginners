@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { chnage_state, globalState } from './values.svelte';
+	import { change_state, globalState } from './values.svelte';
 
 	let { name } = $props();
 </script>
@@ -7,11 +7,11 @@
 <header>{name ? name : 'someone'}'s form</header>
 <button
 	onclick={() => {
-		globalState.jwt = 'new_jwt_token';
+		globalState.jwt = 'new_jwt_from_header';
 	}}>change global state</button
 >
 <button
 	onclick={() => {
-		chnage_state();
+		change_state();
 	}}>change2 global state</button
 >

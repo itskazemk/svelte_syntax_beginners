@@ -31,7 +31,8 @@
 	}
 </script>
 
-<div style="background-color: blue;">page ... {globalState.jwt}</div>
+<div style="background-color: bisque;">jwt value: {globalState.jwt}</div>
+<div style="background-color: bisque;">user Name: {globalState.user}</div>
 <Header name={formState.answers.name} />
 <main>
 	<p>step: {formState.step + 1}</p>
